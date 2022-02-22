@@ -1,10 +1,10 @@
 <template>
 <div>
     <NavBar />
-    <div>
-    <router-link to="/facts" style="float: right; margin: 30px; color: #fff;"><u>Facts</u></router-link>
-    <router-link to="/sites" style="float: right; margin: 30px; color: #fff;"><u>Sites</u></router-link>
-  </div>
+    <div >
+        <router-link to="/facts" class="links2"><u>Facts</u></router-link>
+        <router-link to="/sites" class="links1"><u>Sites</u></router-link>
+    </div>
     
     <h3 style="margin-top: 90px;">We have a problem ______ </h3>
     <h3>(facts that change every 10 seconds)</h3>
@@ -25,6 +25,7 @@
             </md-table>
         </div>
     </div>
+    <Footer />
 </div>
 
 
@@ -34,6 +35,7 @@
 // @ is an alias to /src
 import BaseMap from "@/components/BaseMap.vue";
 import NavBar from "@/components/NavBar.vue";
+import Footer from "@/components/Footer.vue";
 export default {
     name: "Home",
     data() {
@@ -43,10 +45,12 @@ export default {
     },
     components: {
         BaseMap,
-        NavBar
+        NavBar,
+        Footer
     },
+
     async mounted() {
-        const response = await fetch("http://vapre.us.to:9901/v1/uptime/sites/?limit=395")
+        const response = await fetch("https://uptime.voteamerica.com/v1/uptime/sites/?limit=395")
         .then(results => { return results.json()});
         this.services = response.results;
         var states = {};
@@ -118,5 +122,20 @@ export default {
     
     .md-table-head-container {
         text-align: center;
+    }
+
+    .links2 {
+        text-align: center;
+        float: right; 
+        margin-right: 60px; 
+        margin: 30px; 
+        color: rgb(0, 0, 0);
+    }
+
+    .links1 {
+        text-align: center;
+        float: right; 
+        margin: 30px; 
+        color: rgb(0, 0, 0);
     }
 </style>
