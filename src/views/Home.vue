@@ -1,7 +1,13 @@
 <template>
 <div>
     <NavBar />
-    <h3 style="margin-top: 90px;">We have a problem ______ (facts that change every 10 seconds)</h3>
+    <div>
+    <router-link to="/facts" style="float: right; margin: 30px; color: #fff;"><u>Facts</u></router-link>
+    <router-link to="/sites" style="float: right; margin: 30px; color: #fff;"><u>Sites</u></router-link>
+  </div>
+    
+    <h3 style="margin-top: 90px;">We have a problem ______ </h3>
+    <h3>(facts that change every 10 seconds)</h3>
     <div class="tables">
         <div class="map">
             <BaseMap />
