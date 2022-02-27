@@ -13,13 +13,13 @@
             <BaseMap />
         </div> 
         <div class="uptime-table">
-            <md-table v-model="state_monthly_uptimes" md-sort="name" md-sort-order="asc" md-card>
+            <md-table v-model="state_monthly_uptimes" md-sort="name" md-sort-order="desc" md-card>
                 <md-table-row slot="md-table-row" slot-scope="{ item }">
                     <md-table-cell md-label="State">{{
                         item[0]
                     }}</md-table-cell>
-                    <md-table-cell md-label="Monthly Uptime" md-sort-by="">{{
-                        item[1] 
+                    <md-table-cell md-label="Monthly Uptime" md-sort-by="uptime_month ">{{
+                        Math.floor(item[1] * 100) + "%"  
                     }}</md-table-cell>
                 </md-table-row>
             </md-table>
