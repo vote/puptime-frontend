@@ -7,7 +7,7 @@
 </template>
 <script>
 export default {
-  name: "HomeTable",
+  name: "NavBar",
   data() {
   },
   methods: {

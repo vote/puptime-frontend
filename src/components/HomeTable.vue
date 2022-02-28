@@ -62,7 +62,7 @@ export default {
   methods: {
   },
   async mounted() {
-      const response = await fetch("http://vapre.us.to:9901/v1/uptime/sites/?limit=395")
+      const response = await fetch("https://uptime.voteamerica.com/v1/uptime/sites/?limit=395")
         .then(results => { return results.json()});
       this.services = response.results;
       console.log(this.services);
