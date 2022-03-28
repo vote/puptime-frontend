@@ -8,13 +8,6 @@
 <script>
 export default {
   name: "NavBar",
-  data() {
-  },
-  methods: {
-    openDonate: function() {
-      window.open("https://secure.actblue.com/donate/voteamerica?refcode2=website_voteamerica", "_blank");
-    }
-  },
 };
 </script>
 <style>
