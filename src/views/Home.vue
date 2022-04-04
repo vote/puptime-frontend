@@ -24,6 +24,9 @@
                 </md-table-row>
             </md-table>
         </div>
+        <div class="uptime-table">
+            <StateCompare />
+        </div>
     </div>
     <Footer />
 </div>
@@ -36,6 +39,7 @@
 import BaseMap from "@/components/BaseMap.vue";
 import NavBar from "@/components/NavBar.vue";
 import Footer from "@/components/Footer.vue";
+import StateCompare from "@/components/StateCompare.vue";
 export default {
     name: "Home",
     data() {
@@ -46,7 +50,8 @@ export default {
     components: {
         BaseMap,
         NavBar,
-        Footer
+        Footer,
+        StateCompare
     },
 
     async mounted() {
