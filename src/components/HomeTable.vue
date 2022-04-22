@@ -23,15 +23,15 @@
       <a :href=data.item.url>{{ data.value }}</a>
     </template>
     <template #cell(status)="data">
-      <div v-if="data.value === 'up'" style="background-color: green;color: white;">
-  {{ data.value }}
-</div>
-<div v-if="data.value === 'down'" style="background-color: red;color: white;">
-  {{ data.value }}
-</div>
-<div v-if="data.value === 'blocked'" style="background-color: grey;color: white;">
-  {{ data.value }}
-</div>
+      <div v-if="data.value === 'up'" style="background-color: green; color: white;width: 50%;margin:0 auto;">
+        {{ data.value }}
+      </div>
+      <div v-if="data.value === 'down'" style="background-color: red; color: white;width: 50%;margin:0 auto;">
+        {{ data.value }}
+      </div>
+      <div v-if="data.value === 'blocked'" style="background-color: grey; color: white;width: 50%;margin:0 auto;">
+        {{ data.value }}
+      </div>
     </template>
     </b-table>
   </div>
