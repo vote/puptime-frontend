@@ -11,6 +11,7 @@
     striped 
     hover
     bordered
+    fixed
       id="my-table"
       :items="items"
       :fields="fields"
