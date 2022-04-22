@@ -7,9 +7,10 @@
       aria-controls="my-table"
     ></b-pagination>
 
-    <p class="mt-3">Current Page: {{ currentPage }}</p>
-
     <b-table
+    striped 
+    hover
+    bordered
       id="my-table"
       :items="items"
       :fields="fields"
@@ -26,7 +27,7 @@
     name: "HomeTable",
     data() {
       return {
-        perPage: 20,
+        perPage: 15,
         currentPage: 1,
         items: [{},],
         fields: [
