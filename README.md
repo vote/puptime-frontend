@@ -13,9 +13,11 @@ All Pull Requests must follow the Pull Request Template, with a title formatted 
 
 ## Archiecture
 
-- [vuejs](https://vuejs.org/)
-- [mapbox](https://www.mapbox.com/maps)
-- [bootstrapVue](https://bootstrap-vue.org/)
+- Web-API: https://uptime.voteamerica.com/v1/uptime/sites/?limit=395
+- frameworks: [vuejs](https://vuejs.org/)
+- map: [mapbox](https://www.mapbox.com/maps)
+- components: [bootstrapVue](https://bootstrap-vue.org/)
+- deployment: [firebase](https://firebase.google.com/)
 
 ## Source code
 
@@ -50,8 +52,3 @@ npm run lint
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).
-
-### Temporary solution to Allow CORS: Access-Control-Allow-Origin
-
-install the following Chrome extension to Chrome
-https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf/related?hl=en
