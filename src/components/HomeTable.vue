@@ -22,6 +22,9 @@
     <template #cell(description)="data">
       <a :href=data.item.url>{{ data.value }}</a>
     </template>
+    <template #cell(status_changed_at)="data">
+      {{ data.value | moment("MM/DD/YYYY h:mm:ss a") }}
+    </template>
     <template #cell(status)="data">
       <div v-if="data.value === 'up'" style="background-color: green; color: white;width: 50%;margin:0 auto;">
         {{ data.value }}
@@ -32,6 +35,20 @@
       <div v-if="data.value === 'blocked'" style="background-color: grey; color: white;width: 50%;margin:0 auto;">
         {{ data.value }}
       </div>
+    </template>
+    <template #cell(uptime_day)="data">
+      <div>
+        {{ parseInt(data.value *100) }}%
+      </div>
+    </template>
+    <template #cell(uptime_week)="data">
+      {{ parseInt(data.value *100) }}%
+    </template>
+    <template #cell(uptime_month)="data">
+      {{ parseInt(data.value *100) }}%
+    </template>
+    <template #cell(uptime_quarter)="data">
+      {{ parseInt(data.value *100) }}%
     </template>
     </b-table>
   </div>
