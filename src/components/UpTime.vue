@@ -9,6 +9,12 @@
                 </template>
                 <template #cell(1)="data">
                     <b-progress :value="data.value" :max="1" show-progress animated></b-progress>
+
+                    <b-progress class="mt-2" :max="1" show-value>
+                        <b-progress-bar :value="data.value" variant="success"></b-progress-bar>
+                        <b-progress-bar :value="0.1" variant="warning"></b-progress-bar>
+                        <b-progress-bar :value="0.2" variant="danger"></b-progress-bar>
+                    </b-progress>
                 </template>
             </b-table>
   </div>
