@@ -6,28 +6,33 @@
         <router-link to="/sites" class="links1"><u>Sites</u></router-link>
     </div>
     
-    <h3 style="margin-top: 90px;">We have a problem ______ </h3>
+    <h3 style="margin-top:90px;">We have a problem ______ </h3>
     <h3>(facts that change every 10 seconds)</h3>
     <div class="tables">
         <div class="map">
             <BaseMap />
         </div> 
         <div class="uptime-table">
-            <md-table v-model="state_monthly_uptimes" md-sort="name" md-sort-order="desc" md-card>
-                <md-table-row slot="md-table-row" slot-scope="{ item }">
-                    <md-table-cell md-label="State">{{
-                        item[0]
-                    }}</md-table-cell>
-                    <md-table-cell md-label="Monthly Uptime" md-sort-by="uptime_month ">{{
-                        Math.floor(item[1] * 100) + "%"  
-                    }}</md-table-cell>
-                </md-table-row>
-            </md-table>
+            <b-table sticky-header :items="state_monthly_uptimes" head-variant="light">
+                <template #head(0)="">
+                    <span class="text-info">State</span>
+                </template>
+                <template #head(1)="">
+                    <span class="text-info">Downtime in a month %</span>
+                </template>
+                <template #cell(1)="data">
+                    {{ parseInt(data.value *100) }}%
+                </template>
+            </b-table>
         </div>
+    </div>
+
+    <div class="tables">
         <div class="uptime-table">
             <StateCompare />
         </div>
-    </div>
+     </div>
+
     <Footer />
 </div>
 
@@ -121,8 +126,8 @@ export default {
     }
 
     .md-card{
-        width: 80% !important;
-        height: 60vh;
+        width: 40vw;
+        height: 50vh;
     }
     
     .md-table-head-container {
