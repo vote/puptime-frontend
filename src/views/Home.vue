@@ -21,7 +21,7 @@
                     <span class="text-info">Downtime in a month %</span>
                 </template>
                 <template #cell(1)="data">
-                    {{ parseInt(data.value *100) }}%
+                    <b-progress :value="data.value" :max="1" show-progress animated></b-progress>
                 </template>
             </b-table>
         </div>
