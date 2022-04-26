@@ -8,7 +8,7 @@
 
     <h3 style="margin-top:90px;">We have a problem ______ </h3>
     <h3>(facts that change every 10 seconds)</h3>
-    <div class="tables">
+    <div class="tables-top">
         <div class="map">
             <BaseMap />
         </div>
@@ -17,8 +17,8 @@
         </div>
     </div>
 
-    <div class="tables">
-        <div class="uptime-table">
+    <div class="tables-bottom">
+        <div class="state-compare-table">
             <StateCompare />
         </div>
     </div>
@@ -47,19 +47,30 @@ export default {
 </script>
 
 <style>
-.tables {
+.tables-top {
     display: flex;
     margin-top: 5vh;
+    margin-left: 5vw;
+}
+
+.tables-bottom {
+    display: flex;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    margin-bottom: 55vh;
 }
 
 .uptime-table,
+.state-compare-table,
 .map {
     width: 40vw;
-    height: 50vh;
+    height: 30vh;
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
 }
 
 .map {
-    margin-left: 5vw;
     margin-right: 10vw;
 }
 
