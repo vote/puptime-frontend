@@ -1,32 +1,30 @@
 <template>
 <div>
     <NavBar />
-    <div >
+    <div>
         <router-link to="/facts" class="links2"><u>Facts</u></router-link>
         <router-link to="/sites" class="links1"><u>Sites</u></router-link>
     </div>
-    
+
     <h3 style="margin-top:90px;">We have a problem ______ </h3>
     <h3>(facts that change every 10 seconds)</h3>
-    <div class="tables">
+    <div class="tables-top">
         <div class="map">
             <BaseMap />
-        </div> 
+        </div>
         <div class="uptime-table">
-            <UpTime/>
+            <UpTime />
         </div>
     </div>
 
-    <div class="tables">
-        <div class="uptime-table">
+    <div class="tables-bottom">
+        <div class="state-compare-table">
             <StateCompare />
         </div>
-     </div>
+    </div>
 
     <Footer />
 </div>
-
-
 </template>
 
 <script>
@@ -46,37 +44,48 @@ export default {
         UpTime
     },
 };
-
 </script>
 
 <style>
-    .tables {
-        display: flex;
-        margin-top: 5vh;
-    }
+.tables-top {
+    display: flex;
+    margin-top: 5vh;
+    margin-left: 5vw;
+}
 
-    .uptime-table, .map {
-        width: 40vw;
-        height: 50vh;
-    }
+.tables-bottom {
+    display: flex;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    margin-bottom: 55vh;
+}
 
-    .map {
-        margin-left: 5vw;
-        margin-right: 10vw;
-    }
+.uptime-table,
+.state-compare-table,
+.map {
+    width: 40vw;
+    height: 30vh;
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+}
 
-    .links2 {
-        text-align: center;
-        float: right; 
-        margin-right: 60px; 
-        margin: 30px; 
-        color: rgb(0, 0, 0);
-    }
+.map {
+    margin-right: 10vw;
+}
 
-    .links1 {
-        text-align: center;
-        float: right; 
-        margin: 30px; 
-        color: rgb(0, 0, 0);
-    }
+.links2 {
+    text-align: center;
+    float: right;
+    margin-right: 60px;
+    margin: 30px;
+    color: rgb(0, 0, 0);
+}
+
+.links1 {
+    text-align: center;
+    float: right;
+    margin: 30px;
+    color: rgb(0, 0, 0);
+}
 </style>
