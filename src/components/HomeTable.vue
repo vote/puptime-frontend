@@ -69,6 +69,11 @@
             sortable: true
           },
           {
+            key: 'metadata.state_id',
+            label: 'state',
+            sortable: true
+          },
+          {
             key: 'status',
             sortable: true
           },
