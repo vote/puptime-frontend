@@ -15,6 +15,6 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_VOTEAMERICA_UPTIME_DEV }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SE_VOTEAMERICA_PUPTIME }}'
           channelId: live
-          projectId: voteamerica-uptime-dev
+          projectId: se-voteamerica-puptime
