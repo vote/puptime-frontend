@@ -1,11 +1,10 @@
 <template>
-    <div class="footer">
-    </div>
+<div class="footer">
+</div>
 </template>
 
 <style>
-
-  .footer {
+.footer {
     position: fixed;
     bottom: 0;
     width: 100%;
