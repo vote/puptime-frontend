@@ -18,6 +18,9 @@
     </div>
 
     <div class="tables-bottom">
+        <div class="linechart">
+            <LineChart />
+        </div>
         <div class="state-compare-table">
             <StateCompare />
         </div>
@@ -34,6 +37,7 @@ import NavBar from "@/components/NavBar.vue";
 import Footer from "@/components/Footer.vue";
 import StateCompare from "@/components/StateCompare.vue";
 import UpTime from "@/components/UpTime.vue";
+import LineChart from "@/components/LineChart.vue";
 export default {
     name: "Home",
     components: {
@@ -41,7 +45,8 @@ export default {
         NavBar,
         Footer,
         StateCompare,
-        UpTime
+        UpTime,
+        LineChart
     },
 };
 </script>
@@ -62,6 +67,7 @@ export default {
 
 .uptime-table,
 .state-compare-table,
+.linechart,
 .map {
     width: 40vw;
     height: 30vh;
@@ -70,6 +76,7 @@ export default {
     border-width: thin;
 }
 
+.linechart,
 .map {
     margin-right: 10vw;
 }
