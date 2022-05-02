@@ -1,6 +1,6 @@
 <template>
 <div class="overflow-auto">
-    <b-table sticky-header :items="itemsuptime" :fields="fieldsuptime" head-variant="light" :sort-by.sync="sortBy" :sort-desc.sync="sortDesc">
+    <b-table sticky-header="30vh" responsive bordered :items="itemsuptime" :fields="fieldsuptime" head-variant="light" :sort-by.sync="sortBy" :sort-desc.sync="sortDesc">
         <template #cell(status)="data">
             <div v-if="data.value === 'up'" style="background-color: green; color: white;width: 50%;margin:0 auto;">
                 {{ data.value }}
