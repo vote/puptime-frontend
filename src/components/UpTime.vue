@@ -27,7 +27,7 @@ export default {
         return {
             itemsuptime: [{}, ],
             sortBy: 'uptime_month',
-            sortDesc: false,
+            sortDesc: true,
             fieldsuptime: [{
                     key: 'metadata.state_id',
                     label: 'state'
