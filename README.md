@@ -1,8 +1,7 @@
 # VoteAmerica Uptime Tracking
 
 See active deployment of the dev branch at this link:
-https://voteamerica-uptime-dev.web.app/
-
+https://se-voteamerica-puptime.web.app/
 
 # Add Users
 
