@@ -52,6 +52,10 @@ npm run build
 npm run lint
 ```
 
+## MapBox set up
+
+access token to MapBox should be configured as \${{ secrets.MAPBOX_TOKEN }}
+
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).

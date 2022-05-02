@@ -9,7 +9,7 @@ export default {
     name: "BaseMap",
     data() {
         return {
-            accessToken: 'pk.eyJ1IjoiamFzc3VsYW4iLCJhIjoiY2tyemIxdzVwMThjcjJubjh1Z21ibTI4YyJ9.NEU2B4eedUTXvYNcKEaltg',
+            accessToken: '${{ secrets.MAPBOX_TOKEN }}',
             styleMap: {
                 display: 'flex',
                 width: '100%',
